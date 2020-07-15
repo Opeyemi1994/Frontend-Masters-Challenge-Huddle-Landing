@@ -43,8 +43,9 @@ header button {
 }
 
 section.intro {
-  padding: 16px;
+  padding: 4rem 16px;
   background: url("images/bg-section-top-mobile-1.svg") no-repeat bottom left;
+  background-size: contain;
 }
 
 .container img {
@@ -134,7 +135,7 @@ section.intro p {
   justify-content: space-between;
   align-items: center;
   flex-direction: column-reverse;
-  padding: 6rem 0;
+  padding: 6rem 16px;
 }
 
 .feature:nth-child(odd) {
@@ -148,7 +149,8 @@ section.intro p {
 }
 
 section.ready {
-  background: url("images/bg-section-bottom-mobile-1.svg") no-repeat top left;
+  background: url("images/bg-section-bottom-mobile-1.svg") no-repeat top left,
+    url("images/bg-footer-top-mobile.svg") no-repeat bottom left;
   background-size: 100% 50px;
   padding: 8rem 0;
 }
@@ -159,6 +161,10 @@ section.ready {
 
 .feature img {
   margin-bottom: 2rem;
+}
+
+section.ready h2 {
+  margin-bottom: 4rem;
 }
 
 footer {
@@ -226,4 +232,63 @@ footer .subscribe {
   margin-right: 0.8rem;
   color: #fff;
   font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  section.intro p {
+    width: 35%;
+  }
+
+  .counters {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .counter {
+    margin: 8rem 6rem;
+  }
+
+  .feature {
+    flex-direction: row;
+    padding: 6rem 3rem;
+  }
+
+  .feature .center {
+    text-align: left;
+  }
+
+  .feature > div {
+    flex-basis: 40%;
+  }
+
+  .feature p {
+    text-align: left;
+  }
+
+  section.intro {
+    background: url("images/bg-section-top-desktop-1.svg") no-repeat bottom left;
+    background-size: contain;
+  }
+
+  .feature:nth-child(2) {
+    background: url("images/bg-section-bottom-desktop-2.svg") no-repeat top left,
+      url("images/bg-section-top-desktop-2.svg") no-repeat bottom left;
+    background-size: 100% 50px;
+  }
+
+  section.ready {
+    background: url("images/bg-section-bottom-desktop-1.svg") no-repeat top left,
+      url("images/bg-footer-top-desktop.svg") no-repeat bottom left;
+    background-size: 100% 50px;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 6rem;
+  }
+
+  footer > div {
+    flex-basis: 30%;
+  }
 }
